@@ -1,5 +1,4 @@
-/* eslint-disable max-len */
-/* eslint-disable quotes */
+
 import { useState, useCallback } from 'react';
 
 

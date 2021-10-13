@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Comments = ({ comment, postId, comments }) => {
+const Comments = ({ comment }) => {
   return <div>{comment.body}</div>;
 };
 
