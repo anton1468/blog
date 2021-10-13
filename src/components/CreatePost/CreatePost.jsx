@@ -31,7 +31,7 @@ const CreatePost = () => {
             className="validate"
             onChange={(e) => setTitle({ title: e.target.value })}
           />
-          <label for="first_name">Title</label>
+          <label htmlFor="first_name">Title</label>
         </div>
 
         <div className="input-field col s6">
@@ -40,7 +40,7 @@ const CreatePost = () => {
             className="materialize-textarea"
             onChange={(e) => setBody({ body: e.target.value })}
           />
-          <label for="textarea1">Textarea</label>
+          <label htmlFor="textarea1">Textarea</label>
         </div>
       </form>
       <button className="btn btn-primary" onClick={handleCreatePost}>

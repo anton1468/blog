@@ -86,7 +86,7 @@ const Post = ({ post, deletePost, changePost }) => {
                   className="validate"
                   onChange={(e) => setTitle({ title: e.target.value })}
                 />
-                <label for="first_name">Title</label>
+                <label htmlFor="first_name">Title</label>
               </div>
 
               <div className="input-field col s6">
@@ -95,7 +95,7 @@ const Post = ({ post, deletePost, changePost }) => {
                   className="materialize-textarea"
                   onChange={(e) => setBody({ body: e.target.value })}
                 />
-                <label for="textarea1">Body</label>
+                <label htmlFor="textarea1">Body</label>
               </div>
             </form>
           </div>
@@ -119,11 +119,11 @@ const Post = ({ post, deletePost, changePost }) => {
           <div className="card-content white-text">
             <span className="card-title">{post.title}</span>
             <p>{post.body}</p>
-            <h4>Comments</h4>
+
             {showComments && comments ? (
               comments.length === 0 ? (
                 <div>
-                  {" "}
+                  <h4>Comments</h4>
                   <p>No comments yet</p>
                   <div className="input-field col s6">
                     <textarea
@@ -131,12 +131,13 @@ const Post = ({ post, deletePost, changePost }) => {
                       className="materialize-textarea"
                       onChange={(e) => setNewComment(e.target.value)}
                     />
-                    <label for="textarea2">Comment</label>
+                    <label htmlFor="textarea2">Comment</label>
                     <button onClick={addComment}>Add Comment</button>
                   </div>
                 </div>
               ) : (
                 <div>
+                  <h4>Comments</h4>
                   {comments.map((comment) => (
                     <Comments comment={comment} key={comment.id} />
                   ))}
@@ -146,7 +147,7 @@ const Post = ({ post, deletePost, changePost }) => {
                       className="materialize-textarea"
                       onChange={(e) => setNewComment(e.target.value)}
                     />
-                    <label for="textarea2">Comment</label>
+                    <label htmlFor="textarea2">Comment</label>
                     <button onClick={addComment}>Add Comment</button>
                   </div>
                 </div>
